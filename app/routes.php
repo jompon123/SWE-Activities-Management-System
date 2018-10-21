@@ -13,5 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	echo "index";
+});
+
+//Front-end
+
+//Manage
+Route::get('/login', function(){
+	return View::make('login');
 });
