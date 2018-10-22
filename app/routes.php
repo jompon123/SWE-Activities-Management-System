@@ -22,3 +22,7 @@ Route::get('/', function()
 Route::get('/login', function(){
 	return View::make('login');
 });
+
+Route::get('/manage', function(){
+	return View::make('manage.index');
+});
