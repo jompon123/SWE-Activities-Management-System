@@ -26,3 +26,5 @@ Route::get('/login', function(){
 Route::get('/manage', function(){
 	return View::make('manage.index');
 });
+
+Route::get('/manage/profile', 'ManageProfileController@showProfile');
