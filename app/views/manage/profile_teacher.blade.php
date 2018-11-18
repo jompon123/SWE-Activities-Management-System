@@ -4,6 +4,6 @@
 @stop
 
 @section('content')
-    <p>ปอ</p>
-    <p>ไออ้วน</p>
+    <p>ฮัลโหลลลล</p>
+    <p>กุ๊กๆ</p>
 @stop
