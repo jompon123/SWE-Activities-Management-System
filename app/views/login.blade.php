@@ -21,7 +21,8 @@ body{
    <h2>Login</h2>
    <p>Please enter your username and password</p>
    </div>
-    <form id="Login">
+    <!-- <form id="Login"> -->
+    <form action="{{url('/manage/activity/add')}}" method="get">
 
         <div class="form-group">
 
