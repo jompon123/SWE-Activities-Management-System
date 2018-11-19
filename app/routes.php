@@ -28,3 +28,4 @@ Route::get('/manage', function(){
 });
 
 Route::get('/manage/profile', 'ManageProfileController@showProfile');
+Route::get('/manage/activity', 'ManageActivityController@showActivity');
