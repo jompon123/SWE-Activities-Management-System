@@ -18,4 +18,10 @@ class ManageActivityController extends BaseController {
 		return View::make('manage.activity_summary');
 	}
 
+	public function showActivityStatus()
+	{
+		return View::make('manage.activity_check_status');
+	}
+
+
 }
