@@ -27,4 +27,10 @@ Route::get('/manage', function(){
 	return View::make('manage.index');
 });
 
-Route::get('/manage/profile', 'ManageProfileController@showProfile');
+
+Route::get('/manage/activity/add', 'ManageActivityController@showActivityAdd');
+Route::get('/manage/activity', 'ManageActivityController@showActivity');
+Route::get('/manage/activity/summary', 'ManageActivityController@showActivitySummary');
+Route::get('/manage/activity/check/status', 'ManageActivityController@showActivityStatus');
+Route::get('/manage/user', 'ManageUserController@showUser');
+Route::get('/manage/user/add', 'ManageUserController@showUserAdd');
