@@ -10,7 +10,7 @@
    
    <!-- Image and text -->
 
-    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #4267b2;">
         <a class="navbar-brand mb-0 h1" href="#">Software En</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

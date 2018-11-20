@@ -1,11 +1,9 @@
-- สร้างกิจกรรม
-
 @extends('manage.layout')
 @section('title')
     test
 @stop
 
 @section('content')
-    <p>ฮัลโหลลลล</p>
-    <p>กุ๊กๆ</p>
+    <p>- สร้างกิจกรรม</p>
+
 @stop
