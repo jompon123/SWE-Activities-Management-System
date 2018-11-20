@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	echo "index";
+	echo "index test";
 });
 
 //Front-end
