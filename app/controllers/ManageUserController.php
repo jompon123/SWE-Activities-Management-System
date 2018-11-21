@@ -15,8 +15,11 @@ class ManageUserController extends BaseController {
 
 	public function actionUserAdd()
 	{
-		$firstname = Input::get("firstname");
-		return $firstname;
+		$user = new User;
+		$user->username = Input::get("student_id");
+		$user->password = Input::get("password");
+		$reuslt = $user->save();
+		return ($reuslt) ? 'true' : 'false';
 	}
 
 }

@@ -84,7 +84,7 @@
             <div class="form-group">
                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                   <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-calendar"></i></div>
-                  <input type="text" id="password" name="password" class="form-control" placeholder="รหัสผ่านใหม่" required="" autofocus="">  
+                  <input type="password" id="password" name="password" class="form-control" placeholder="รหัสผ่านใหม่" required="" autofocus="">  
                </div>
             </div>
          </div>
