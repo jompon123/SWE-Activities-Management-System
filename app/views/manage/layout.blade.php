@@ -10,8 +10,9 @@
    
    <!-- Image and text -->
 
-    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #4267b2;">
-        <a class="navbar-brand mb-0 h1" href="#">Software En</a>
+
+    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #63e3f7;">
+            <a class="navbar-brand mb-0 h1" href=""><img id="" src="{{asset('assets/image/logo.png')}}" width="120" height="60" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,13 +28,29 @@
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    จัดการกิจกรรม
                   </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">สร้างกิจกรรม</a>
                   <a class="dropdown-item" href="#">กิจกรรมทั้งหมด</a>
                   <a class="dropdown-item" href="#">สรุปการเข้าร่วมกิจกรรม</a>
                 </div>
                 </li>
-            </ul>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   จัดการผู้ใช้งาน
+                  </a>
+                <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">นักศึกษา</a>
+                  <a class="dropdown-item" href="#">อาจารย์</a>
+                </div>
+                </li>
+                 <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ชื่อ login</a>
+                <div class="dropdown-menu "  aria-labelledby="navbarDropdownMenuLink" >
+                  <a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a>
+                  <a class="dropdown-item" href="#">แก้ไขรหัสผ่าน</a>
+                  <a class="dropdown-item" href="#">ออกจากระบบ</a>
+                </li>
+           </ul>
         </div>
     </nav>    
         <div class="container">

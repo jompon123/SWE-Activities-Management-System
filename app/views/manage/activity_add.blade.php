@@ -4,6 +4,5 @@
 @stop
 
 @section('content')
-    <p>- สร้างกิจกรรม</p>
-
+    
 @stop
