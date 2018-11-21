@@ -13,5 +13,10 @@ class ManageUserController extends BaseController {
 		return View::make('manage.user_add');
 	}
 
+	public function actionUserAdd()
+	{
+		$firstname = Input::get("firstname");
+		return $firstname;
+	}
 
 }
