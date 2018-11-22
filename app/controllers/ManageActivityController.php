@@ -8,14 +8,25 @@ class ManageActivityController extends BaseController {
 		return View::make('manage.activity_add');
 	}
 
-	public function showActivity()
-	{
-		return View::make('manage.activity');
-	}
 
 	public function showActivitySummary()
 	{
 		return View::make('manage.activity_summary');
+	}
+
+	public function showActivitySummaryUseradd()
+	{
+		return View::make('manage.activity_summary_useradd');
+	}
+
+	public function showActivityConclude()
+	{
+		return View::make('manage.activity_conclude');
+	}
+
+	public function showActivityDetail()
+	{
+		return View::make('manage.activity_detail');
 	}
 
 	public function showActivityStatus()
