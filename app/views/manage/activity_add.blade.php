@@ -18,10 +18,32 @@ test
             <label for="name">ชื่อกิจกรรม</label>           
          </div>
          <div class="col-md-6">
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-laptop"></i></span></div>
+               <input type="text" id="name" name="name" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="form-control-feedback">
+               <span class="text-danger align-middle">
+                  <!-- Put name validation error messages here -->    
+               </span>
+            </div>
+         </div>
+      </div>
+     
+      <div class="row">
+         <div class="col-md-3 field-label-responsive">     
+            <label for="name">รายละเอียด</label>                      
+         </div>
+         <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-laptop"></i></div>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="">     
+               <div class="input-group">
+                   <div class="input-group-prepend">
+                     <span class="input-group-text"><i class="fa fa-comment"></i></span>
+                  </div>
+                     <textarea   id="activitydetail" name="activitydetail"  class="form-control" aria-label="With textarea" placeholder="รายละเอียด" required=""></textarea>
                </div>
             </div>
          </div>
@@ -34,62 +56,18 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive">         
-            <label for="name">ประเภทกิจกรรม</label>    
-         </div>
-         <div class="col-md-6">
-            <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-laptop"></i></div>
-                  <select id="type_id" name="type_id" class="form-control">
-                     <option value="1">กิจกรรมเสริมหลักสูตร</option>
-                     <option value="2">กิจกรรมรายวิชา</option>
-                     <option value="3">กิจกรรมนักศึกษา</option>
-                  </select>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put name validation error messages here -->  
-               </span>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-md-3 field-label-responsive">     
-            <label for="name">รายละเอียด</label>                      
-         </div>
-         <div class="col-md-6">
-            <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem">
-                     <i class="fa fa-comment"></i>
-                  </div>
-                  <textarea id="activitydetail" name="activitydetail" class="form-control" placeholder="รายละเอียด" required=""></textarea>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">                 
-               <span class="text-danger align-middle">   
-               </span>           
-            </div>
-         </div>
-      </div>
-      <div class="row">
          <div class="col-md-3 field-label-responsive">  
             <label for="date">วันเริ่ม-สิ้นสุดกิจกรรม วัน/เดือน/ปี เวลา</label> 
          </div>
          <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-calendar"></i></div>
-                  <input type="text" id="Yearstart" name="Yearstart" class="form-control" required="">  
-               </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span></div>
+                <input type="text" id="Yearstart" name="Yearstart" class="form-control" required="" aria-describedby="basic-addon1">
             </div>
          </div>
+       </div>
          <div class="col-md-3">
             <div class="form-control-feedback">
                <span class="text-danger align-middle">
@@ -126,17 +104,15 @@ test
          </div>
          <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:15px">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span></div>
                   <select id="teacher_id" name="teacher_id" class="form-control">
                      <option value="84">ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว</option>
                      <option value="85">ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล</option>
                      <option value="86">ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ</option>
-                     <
-                     option value="87">อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี</option>
-                     <option value="88">อาจารย์ ศิริภิญโญ  จันทมุณี</option>
+                     <option value="87">อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี</option>
                      <option value="89">อาจารย์ ดร. กรัณรัตน์  ธรรมรักษ์</option>
-                     <option value="90">อาจารย์ ดร. จิตติมา  ศังขมณี</option>
                   </select>
                </div>
             </div>
@@ -155,10 +131,9 @@ test
          </div>
          <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:15px">
-                  <div class="input-group-addon" style="width: 2.6rem">
-                     <i class="fa fa-home"></i>
-                  </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-home"></i></span></div>
                   <select id="location_id" name="location_id" class="form-control">
                      <option value="2">อาคารเรียนรวม7  ( บริเวณด้านหลังอาคารเรียนรวม7 )</option>
                      <option value="3">โรงอาหาร4  ( บริเวณด้านในโรงอาหาร4 )</option>
@@ -185,10 +160,9 @@ test
          </div>
          <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:15px">
-                  <div class="input-group-addon" style="width: 2.6rem">
-                     <i class="fa fa-picture-o"></i>
-                  </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-image"></i></span></div>
                   <input type="file" id="file" name="file" class="form-control" placeholder="file" accept="image/png, image/jpeg, image/gif">                   
                </div>
             </div>
@@ -213,15 +187,18 @@ test
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559">                                นักศึกษาปีการศึกษา 2559                            </label>                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
                      <label class="form-check-label required">                              
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558"> 
-                     นักศึกษาปีการศึกษา 2558                            </label>    
+                     นักศึกษาปีการศึกษา 2558
+                     </label>    
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <label class="form-check-label required">                           
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2557">  
-                     นักศึกษาปีการศึกษา 2557                            </label>           
+                     นักศึกษาปีการศึกษา 2557                            
+                     </label>           
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
                      <label class="form-check-label required">      
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2556">
-                     นักศึกษาปีการศึกษา 2556                            </label>      
+                     นักศึกษาปีการศึกษา 2556                            
+                     </label>      
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
                   </div>
                </div>
