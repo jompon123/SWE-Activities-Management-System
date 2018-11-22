@@ -3,25 +3,43 @@
 test
 @stop
 @section('content')
-<form action="/swe-207/manage/activityaddpost" class="form-horizontal" autocomplete="off" enctype="multipart/form-data" method="post">
+
+<style>
+.topping{
+   text-align: right;
+}
+.year{
+  
+}
+</style>
+
+<form class="form-horizontal" autocomplete="off" enctype="multipart/form-data" method="post">
    <div class="container">
       <ul class="errorMessages"></ul>
       <div class="row">
-         <div class="col-md-3"></div>
+         <div class="col-md-4"></div>
          <div class="col-md-6" style="margin-top:50px">
             <h2>สร้างข้อมูลกิจกรรม</h2>
             <hr>
          </div>
       </div>
+      <div class="col-md-3">
+            <div class="form-control-feedback">
+               <span class="text-danger align-middle">
+                  <!-- Put name validation error messages here -->    
+               </span>
+            </div>
+         </div>
+      </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive">         
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">         
             <label for="name">ชื่อกิจกรรม</label>           
          </div>
          <div class="col-md-6">
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-laptop"></i></span></div>
-               <input type="text" id="name" name="name" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
+               <input type="text" id="activity" name="activity" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
             </div>
          </div>
          <div class="col-md-3">
@@ -34,7 +52,7 @@ test
       </div>
      
       <div class="row">
-         <div class="col-md-3 field-label-responsive">     
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">     
             <label for="name">รายละเอียด</label>                      
          </div>
          <div class="col-md-6">
@@ -56,7 +74,30 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive">  
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
+            <label for="password">ช่วงในการจัดกิจกรรม</label> 
+         </div>
+         <div class="col-md-6">
+            <div class="form-group">
+               <div class="input-group " style="margin-top:10px">
+                  <div class="form-group "> 
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                     <label class="form-check-label required">   
+                     <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="morning">      
+                     ช่วงเช้า      
+                     </label>       
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
+                     <label class="form-check-label required">                              
+                     <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="after"> 
+                     ช่วงบ่าย
+                     </label>       
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">  
             <label for="date">วันเริ่ม-สิ้นสุดกิจกรรม วัน/เดือน/ปี เวลา</label> 
          </div>
          <div class="col-md-6">
@@ -77,7 +118,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive" style="margin-top:3px">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
             <label for="password">ภาคการศึกษา</label>     
          </div>
          <div class="col-md-6">
@@ -98,35 +139,46 @@ test
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col-md-3 field-label-responsive" style="margin-top:17px">  
-            <label for="file">อาจารย์ผู้รับผิดชอบ</label>  
+         <div class="row">
+         <div class="topping col-md-4 field-label-responsive">   
+            <label for="password">อาจารย์ผู้รับผิดชอบ</label> 
          </div>
          <div class="col-md-6">
-            <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span></div>
-                  <select id="teacher_id" name="teacher_id" class="form-control">
-                     <option value="84">ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว</option>
-                     <option value="85">ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล</option>
-                     <option value="86">ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ</option>
-                     <option value="87">อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี</option>
-                     <option value="89">อาจารย์ ดร. กรัณรัตน์  ธรรมรักษ์</option>
-                  </select>
+            <div class="year form-group">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
+                  <div class="form-group "> 
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                     <label class="form-check-label required">   
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
+                     ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว        
+                     </label>       
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
+                     <label class="form-check-label required">                              
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559"> 
+                     อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
+                     </label>    
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label class="form-check-label required">                           
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2560">  
+                     ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ                            
+                     </label>           
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+                     <label class="form-check-label required">      
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2561">
+                     อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี                            
+                     </label>      
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label class="form-check-label required">      
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="other">
+                     ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล                          
+                     </label>   
+                  </div>
                </div>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put e-mail validation error messages here -->       
-               </span>
             </div>
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive" style="margin-top:17px">  
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">  
             <label for="file">สถานที่จัดกิจกรรม</label>   
          </div>
          <div class="col-md-6">
@@ -155,7 +207,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive" style="margin-top:17px">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
             <label for="file">รูปกิจกรรม</label>   
          </div>
          <div class="col-md-6">
@@ -163,7 +215,7 @@ test
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-image"></i></span></div>
-                  <input type="file" id="file" name="file" class="form-control" placeholder="file" accept="image/png, image/jpeg, image/gif">                   
+                  <input type="file" id="file" name="file" class="form-control" placeholder="file" accept="image/png, image/jpeg, image/gif">             
                </div>
             </div>
          </div>
@@ -176,37 +228,44 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3 field-label-responsive">   
+         <div class="topping col-md-4 field-label-responsive">   
             <label for="password">ปีการศึกษาที่เข้าร่วม</label> 
          </div>
          <div class="col-md-6">
-            <div class="form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:8px">
+            <div class="year form-group">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
                   <div class="form-group ">     
                      <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559">                                นักศึกษาปีการศึกษา 2559                            </label>                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
+                     นักศึกษาปีการศึกษา 2558        
+                     </label>       
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
                      <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558"> 
-                     นักศึกษาปีการศึกษา 2558
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559"> 
+                     นักศึกษาปีการศึกษา 2559
                      </label>    
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
                      <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2557">  
-                     นักศึกษาปีการศึกษา 2557                            
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2560">  
+                     นักศึกษาปีการศึกษา 2560                            
                      </label>           
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2556">
-                     นักศึกษาปีการศึกษา 2556                            
-                     </label>      
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2561">
+                     นักศึกษาปีการศึกษา 2561                            
+                     </label>    
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label class="form-check-label required">      
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="other">
+                     นักศึกษาปีการศึกษาอื่นๆ                           
+                     </label>   
                   </div>
                </div>
             </div>
          </div>
       </div>
       <div class="row">
-         <div class="col-md-3"></div>
+         <div class="col-md-4"></div>
          <div class="col-md-6">             
             <input type="submit" value="บันทึก" class="btn btn-success">       
          </div>
