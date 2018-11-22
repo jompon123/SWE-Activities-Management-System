@@ -3,9 +3,14 @@
 class ManageUserController extends BaseController {
 
 	
-	public function showUser()
+	public function showUserStudent()
 	{
-		return View::make('manage.user');
+		return View::make('manage.user_student');
+	}
+	
+	public function showUserTeacher()
+	{
+		return View::make('manage.user_teacher');
     }
     
     public function showUserAdd()
