@@ -8,17 +8,16 @@
 <!------ Include the above in your HEAD tag ---------->
 <style>
 body{
-    background-color: #477279;
+    background-color: #ffffff;
 }
 </style>
   </head>
 <body id="LoginForm">
 <div class="container">
-<h1 class="form-heading">login Form</h1>
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
-   <h2>Login</h2>
+   <h3>Login</h3>
    <p>Please enter your username and password</p>
    </div>
     <!-- <form id="Login"> -->
