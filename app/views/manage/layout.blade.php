@@ -12,7 +12,7 @@
    <!-- Image and text -->
 
 
-    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #63e3f7;">
+    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #99afdc">
             <a class="navbar-brand mb-0 h1" href=""><img id="" src="{{asset('assets/image/logo.png')}}" width="120" height="60" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -74,19 +74,19 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
             <label for="password">ช่วงในการจัดกิจกรรม</label> 
          </div>
          <div class="col-md-6">
             <div class="form-group">
-               <div class="input-group " style="margin-top:8px">
+               <div class="input-group " style="margin-top:10px">
                   <div class="form-group "> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
                      <label class="form-check-label required">   
                      <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="morning">      
                      ช่วงเช้า      
                      </label>       
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
                      <label class="form-check-label required">                              
                      <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="after"> 
                      ช่วงบ่าย
@@ -118,7 +118,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:5px">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
             <label for="password">ภาคการศึกษา</label>     
          </div>
          <div class="col-md-6">
@@ -139,40 +139,20 @@ test
             </div>
          </div>
       </div>
-      <br>
-      <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:17px">  
-            <label for="file">อาจารย์ผู้รับผิดชอบ</label>  
-         </div>
-         <div class="col-md-6">
-            <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span></div>
-                  <select id="teacher_id" name="teacher_id" class="form-control">
-                     <option value="84">ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว</option>
-                     <option value="85">ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล</option>
-                     <option value="86">ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ</option>
-                     <option value="87">อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี</option>
-                     <option value="89">อาจารย์ ดร. กรัณรัตน์  ธรรมรักษ์</option>
-                  </select>
-               </div>
-            </div>
-         </div>
          <div class="row">
          <div class="topping col-md-4 field-label-responsive">   
             <label for="password">อาจารย์ผู้รับผิดชอบ</label> 
          </div>
          <div class="col-md-6">
             <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:8px">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
                   <div class="form-group "> 
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
                      <label class="form-check-label required">   
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
                      ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว        
                      </label>       
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
                      <label class="form-check-label required">                              
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559"> 
                      อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
@@ -182,7 +162,7 @@ test
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2560">  
                      ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ                            
                      </label>           
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
                      <label class="form-check-label required">      
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2561">
                      อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี                            
@@ -197,16 +177,8 @@ test
             </div>
          </div>
       </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put e-mail validation error messages here -->       
-               </span>
-            </div>
-         </div>
-      </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:17px">  
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">  
             <label for="file">สถานที่จัดกิจกรรม</label>   
          </div>
          <div class="col-md-6">
@@ -235,7 +207,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:17px">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
             <label for="file">รูปกิจกรรม</label>   
          </div>
          <div class="col-md-6">
@@ -261,7 +233,7 @@ test
          </div>
          <div class="col-md-6">
             <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:8px">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
                   <div class="form-group ">     
                      <label class="form-check-label required">   
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
