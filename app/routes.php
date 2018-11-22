@@ -27,15 +27,22 @@ Route::get('/manage', function(){
 	return View::make('manage.index');
 });
 
-Route::get('/manage/activity', 'ManageActivityController@showActivity');
 
 Route::get('/manage/activity/add', 'ManageActivityController@showActivityAdd');
 
 Route::get('/manage/activity/summary', 'ManageActivityController@showActivitySummary');
 
+Route::get('/manage/activity/summary/useradd', 'ManageActivityController@showActivitySummaryUseradd');
+
+Route::get('/manage/activity/conclude', 'ManageActivityController@showActivityConclude');
+
+Route::get('/manage/activity/detail', 'ManageActivityController@showActivityDetail');
+
 Route::get('/manage/activity/check/status', 'ManageActivityController@showActivityStatus');
 
-Route::get('/manage/user', 'ManageUserController@showUser');
+Route::get('/manage/user/student', 'ManageUserController@showUserStudent');
+
+Route::get('/manage/user/teacher', 'ManageUserController@showUserTeacher');
 
 Route::get('/manage/user/add', 'ManageUserController@showUserAdd');
 Route::post('/manage/user/add', 'ManageUserController@actionUserAdd');
