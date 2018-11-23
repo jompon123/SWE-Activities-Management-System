@@ -8,20 +8,16 @@ test
 .topping{
    text-align: right;
 }
-.year{
-  
-}
 </style>
 
 <form class="form-horizontal" autocomplete="off" enctype="multipart/form-data" method="post">
    <div class="container">
       <ul class="errorMessages"></ul>
       <div class="row">
-         <div class="col-md-4"></div>
-         <div class="col-md-6" style="margin-top:50px">
+         <div class="col-md-4" style="margin-top:50px">
             <h2>สร้างข้อมูลกิจกรรม</h2>
-            <hr>
-         </div>
+            <hr></div>
+         <div class="col-md-6"></div>
       </div>
       <div class="col-md-3">
             <div class="form-control-feedback">
@@ -31,8 +27,8 @@ test
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">         
+      <div class="row" style="margin-top:20px">
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">         
             <label for="name">ชื่อกิจกรรม</label>           
          </div>
          <div class="col-md-6">
@@ -52,7 +48,7 @@ test
       </div>
      
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">     
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">     
             <label for="name">รายละเอียด</label>                      
          </div>
          <div class="col-md-6">
@@ -74,7 +70,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive">   
+         <div class="topping col-md-2 field-label-responsive">   
             <label for="password">วันที่เริ่มกิจกรรม</label>     
          </div>
          <div class="col-md-6">
@@ -83,7 +79,7 @@ test
                   <div class="form-group">
                   <label for="password"></label>             
                      <input type="text" id="daystart" name="daystart" class="form-control" placeholder="วัน เดือน ปี" required="">
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label for="password">วันที่สิ้นสุด</label>      
                      &nbsp;&nbsp;         
                      <input type="text" id="dayend" name="dayend" class="form-control" placeholder="วัน เดือน ปี" required=""> 
@@ -93,7 +89,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
             <label for="password">เวลาเริ่มกิจกรรม</label>     
          </div>
          <div class="col-md-6">
@@ -102,7 +98,7 @@ test
                   <div class="form-group">
                   <label for="password"></label>             
                      <input type="text" id="timestart" name="timestart" class="form-control" placeholder="00:00" required="">
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label for="password">เวลาสิ้นสุด</label>      
                      &nbsp;&nbsp;         
                      <input type="text" id="timeend" name="timeend" class="form-control" placeholder="00:00" required=""> 
@@ -112,7 +108,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
             <label for="password">ภาคการศึกษา</label>     
          </div>
          <div class="col-md-6">
@@ -124,7 +120,7 @@ test
                         <option value="2">ภาคการศึกษาที่ 2</option>
                         <option value="3">ภาคการศึกษาที่ 3</option>
                      </select>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <label for="password">ปีการศึกษา</label>      
                      &nbsp;&nbsp;         
                      <input type="text" id="Yearstudy" name="Yearstudy" class="form-control" placeholder="ปีการศึกษา" required=""> 
@@ -134,7 +130,7 @@ test
          </div>
       </div>
          <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:25px">   
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:25px">   
             <label for="password">อาจารย์ผู้รับผิดชอบ</label> 
          </div>
          <div class="col-md-6">
@@ -172,7 +168,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">         
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">         
             <label for="name">สถานที่จัดกิจกรรม</label>           
          </div>
          <div class="col-md-6">
@@ -191,7 +187,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:10px">   
             <label for="file">รูปกิจกรรม</label>   
          </div>
          <div class="col-md-6">
@@ -212,7 +208,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
+         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
             <label for="password">ปีการศึกษาที่เข้าร่วม</label> 
          </div>
          <div class="col-md-6">
@@ -249,7 +245,7 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="col-md-4"></div>
+         <div class="col-md-2"></div>
          <div class="col-md-6">             
             <input type="submit" value="บันทึก" class="btn btn-success">       
          </div>
