@@ -44,5 +44,7 @@ Route::get('/manage/user/student', 'ManageUserController@showUserStudent');
 
 Route::get('/manage/user/teacher', 'ManageUserController@showUserTeacher');
 
-Route::get('/manage/user/add', 'ManageUserController@showUserAdd');
-Route::post('/manage/user/add', 'ManageUserController@actionUserAdd');
+Route::get('/manage/user/student/add', 'ManageUserController@showUserStudentAdd');
+Route::post('/manage/user/student/add', 'ManageUserController@actionUserStudentAdd');
+
+Route::get('/manage/user/teacher/add', 'ManageUserController@showUserTeacherAdd');

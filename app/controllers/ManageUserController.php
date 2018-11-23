@@ -13,18 +13,23 @@ class ManageUserController extends BaseController {
 		return View::make('manage.user_teacher');
     }
     
-    public function showUserAdd()
+    public function showUserStudentAdd()
 	{
-		return View::make('manage.user_add');
+		return View::make('manage.user_student_add');
 	}
 
-	public function actionUserAdd()
+	public function actionUserStudentAdd()
 	{
 		$user = new User;
 		$user->username = Input::get("student_id");
 		$user->password = Input::get("password");
 		$reuslt = $user->save();
 		return ($reuslt) ? 'true' : 'false';
+	}
+
+	public function showUserTeacherAdd()
+	{
+		return View::make('manage.user_teacher_add');
 	}
 
 }
