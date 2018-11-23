@@ -39,7 +39,7 @@ test
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-laptop"></i></span></div>
-               <input type="text" id="activity" name="activity" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
+               <input type="text" id="activityName" name="activityName" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
             </div>
          </div>
          <div class="col-md-3">
@@ -83,12 +83,12 @@ test
                   <div class="form-group "> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
                      <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="morning">      
+                     <input type="radio" class="form-check-input" name="range[]" id="optionsRadios1" value="morning">      
                      ช่วงเช้า      
                      </label>       
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
                      <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="range[]" id="optionsRadios1" value="after"> 
+                     <input type="radio" class="form-check-input" name="range[]" id="optionsRadios1" value="after"> 
                      ช่วงบ่าย
                      </label>       
                   </div>
@@ -125,7 +125,7 @@ test
             <div class="form-inline">
                <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:5px">
                   <div class="form-group">
-                     <select id="semester" name="semester" class="form-control">
+                     <select id="term" name="term" class="form-control">
                         <option value="1">ภาคการศึกษาที่ 1</option>
                         <option value="2">ภาคการศึกษาที่ 2</option>
                         <option value="3">ภาคการศึกษาที่ 3</option>
@@ -140,36 +140,36 @@ test
          </div>
       </div>
          <div class="row">
-         <div class="topping col-md-4 field-label-responsive">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:25px">   
             <label for="password">อาจารย์ผู้รับผิดชอบ</label> 
          </div>
          <div class="col-md-6">
             <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
                   <div class="form-group "> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
                      <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2558">      
                      ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว        
                      </label>       
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
                      <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559"> 
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2559"> 
                      อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
                      </label>    
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2560">  
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2560">  
                      ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ                            
                      </label>           
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2561">
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2561">
                      อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี                            
                      </label>      
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="other">
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="other">
                      ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล                          
                      </label>   
                   </div>
@@ -213,7 +213,7 @@ test
          <div class="col-md-6">
             <div class="form-group">
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
+                <div class="input-group-prepend" >
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-image"></i></span></div>
                   <input type="file" id="file" name="file" class="form-control" placeholder="file" accept="image/png, image/jpeg, image/gif">             
                </div>
@@ -228,12 +228,12 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
             <label for="password">ปีการศึกษาที่เข้าร่วม</label> 
          </div>
          <div class="col-md-6">
             <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:10px">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
                   <div class="form-group ">     
                      <label class="form-check-label required">   
                      <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
