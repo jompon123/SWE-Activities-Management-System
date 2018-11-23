@@ -39,7 +39,7 @@ test
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-laptop"></i></span></div>
-               <input type="text" id="activityName" name="activityName" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
+               <input type="text" id="activityname" name="activityname" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
             </div>
          </div>
          <div class="col-md-3">
@@ -74,56 +74,50 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
-            <label for="password">ช่วงในการจัดกิจกรรม</label> 
+         <div class="topping col-md-4 field-label-responsive">   
+            <label for="password">วันที่เริ่มกิจกรรม</label>     
          </div>
          <div class="col-md-6">
-            <div class="form-group">
-               <div class="input-group " style="margin-top:10px">
-                  <div class="form-group "> 
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-                     <label class="form-check-label required">   
-                     <input type="radio" class="form-check-input" name="range[]" id="optionsRadios1" value="morning">      
-                     ช่วงเช้า      
-                     </label>       
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
-                     <label class="form-check-label required">                              
-                     <input type="radio" class="form-check-input" name="range[]" id="optionsRadios1" value="after"> 
-                     ช่วงบ่าย
-                     </label>       
+            <div class="form-inline">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="form-group">
+                  <label for="password"></label>             
+                     <input type="text" id="daystart" name="daystart" class="form-control" placeholder="วัน เดือน ปี" required="">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label for="password">วันที่สิ้นสุด</label>      
+                     &nbsp;&nbsp;         
+                     <input type="text" id="dayend" name="dayend" class="form-control" placeholder="วัน เดือน ปี" required=""> 
                   </div>
                </div>
             </div>
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">  
-            <label for="date">วันเริ่ม-สิ้นสุดกิจกรรม วัน/เดือน/ปี เวลา</label> 
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
+            <label for="password">เวลาเริ่มกิจกรรม</label>     
          </div>
          <div class="col-md-6">
-            <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar"></i></span></div>
-                <input type="text" id="Yearstart" name="Yearstart" class="form-control" required="" aria-describedby="basic-addon1">
-            </div>
-         </div>
-       </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put e-mail validation error messages here -->                   
-               </span>
+            <div class="form-inline">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
+                  <div class="form-group">
+                  <label for="password"></label>             
+                     <input type="text" id="timestart" name="timestart" class="form-control" placeholder="00:00" required="">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label for="password">เวลาสิ้นสุด</label>      
+                     &nbsp;&nbsp;         
+                     <input type="text" id="timeend" name="timeend" class="form-control" placeholder="00:00" required=""> 
+                  </div>
+               </div>
             </div>
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:20px">   
             <label for="password">ภาคการศึกษา</label>     
          </div>
          <div class="col-md-6">
             <div class="form-inline">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:5px">
+               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
                   <div class="form-group">
                      <select id="term" name="term" class="form-control">
                         <option value="1">ภาคการศึกษาที่ 1</option>
@@ -133,7 +127,7 @@ test
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <label for="password">ปีการศึกษา</label>      
                      &nbsp;&nbsp;         
-                     <input type="text" id="Year" name="Year" class="form-control" placeholder="ปีการศึกษา" required=""> 
+                     <input type="text" id="Yearstudy" name="Yearstudy" class="form-control" placeholder="ปีการศึกษา" required=""> 
                   </div>
                </div>
             </div>
@@ -178,24 +172,14 @@ test
          </div>
       </div>
       <div class="row">
-         <div class="topping col-md-4 field-label-responsive" style="margin-top:10px">  
-            <label for="file">สถานที่จัดกิจกรรม</label>   
+         <div class="topping col-md-4 field-label-responsive" style="margin-top:3px">         
+            <label for="name">สถานที่จัดกิจกรรม</label>           
          </div>
          <div class="col-md-6">
-            <div class="form-group">
-            <div class="input-group mb-3">
+             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-home"></i></span></div>
-                  <select id="location_id" name="location_id" class="form-control">
-                     <option value="2">อาคารเรียนรวม7  ( บริเวณด้านหลังอาคารเรียนรวม7 )</option>
-                     <option value="3">โรงอาหาร4  ( บริเวณด้านในโรงอาหาร4 )</option>
-                     <option value="4">มหาวิทยาลัยสงขลานครินทร์  ( 15 ถนน กาญจนวนิช ซอย 7 ตำบล คอหงส์ อำเภอ หาดใหญ่ สงขลา 90110 )</option>
-                     <option value="5">มหาวิทยาลัยทักษิณวิทยาเขตพัทลุง  ( 222 หมู่ ตำบล บ้านพร้าว อำเภอ ป่าพะยอม พัทลุง 93210 )</option>
-                     <option value="6">ทิพย์บุรีรีสอร์ท  ( 330/7 หาดหินงาม หมู่ 3 ต.สิชล อ.สิชลจ.นครศรีธรรมราช  80120 )</option>
-                     <option value="7">พูลสุขรีสอร์ท  ( 58 หมู่1 ตำบลท่าขึ้น อำเภอท่าศาลา จังหวัดนครศรีธรรมราช 80160 )</option>
-                     <option value="8">อาคารเครื่องมือวิทยาศาสตร์  ( ห้องปฏิบัติการคอมพิวเตอร์2  )</option>
-                  </select>
-               </div>
+               <input type="text" id="location" name="location" class="form-control" placeholder="สถานที่จัดกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
             </div>
          </div>
          <div class="col-md-3">
