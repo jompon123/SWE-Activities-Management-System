@@ -6,6 +6,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
     </head>
     <body>
    
@@ -17,7 +18,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-top:30px">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                   <a class="nav-link" href="#">หน้าหลัก <span class="sr-only">(current)</span></a>
@@ -30,9 +31,9 @@
                    จัดการกิจกรรม
                   </a>
                 <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">สร้างกิจกรรม</a>
-                  <a class="dropdown-item" href="#">กิจกรรมทั้งหมด</a>
-                  <a class="dropdown-item" href="#">สรุปการเข้าร่วมกิจกรรม</a>
+                  <a class="dropdown-item" href="{{url('/manage/activity/summary/useradd')}}">สร้างกิจกรรม</a>
+                  <a class="dropdown-item" href="{{url('/manage/activity/summary')}}">กิจกรรมทั้งหมด</a>
+                  <a class="dropdown-item" href="{{url('/manage/activity/conclude')}}">สรุปการเข้าร่วมกิจกรรม</a>
                 </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -40,12 +41,12 @@
                    จัดการผู้ใช้งาน
                   </a>
                 <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">นักศึกษา</a>
-                  <a class="dropdown-item" href="#">อาจารย์</a>
+                  <a class="dropdown-item" href="{{url('/manage/user/student')}}">นักศึกษา</a>
+                  <a class="dropdown-item" href="{{url('/manage/user/teacher')}}">อาจารย์</a>
                 </div>
                 </li>
                  <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ชื่อ login</a>
+                  <a class="login nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ชื่อ login</a>
                 <div class="dropdown-menu "  aria-labelledby="navbarDropdownMenuLink" >
                   <a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a>
                   <a class="dropdown-item" href="#">แก้ไขรหัสผ่าน</a>
