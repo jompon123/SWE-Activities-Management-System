@@ -10,6 +10,23 @@ class ManageActivityController extends BaseController {
 
 	public function actionActivityAdd()
 	{
+		$rules = array(
+			'activityname' => 'required',
+			'daystart' => 'required',
+			'dayend' => 'required',
+			'timestart' => 'required',
+			'timeend' => 'required',
+			'sector' => 'required',
+			'location' => 'required',
+			'term' => 'required',
+			'teacher' => 'required_without_all',
+			'years' => 'required_without_all'
+		);
+		$validator = Validator::make(Input::all(),$rules);
+
+		if($validator->fails()){
+			return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
+		}
 		$activity = new Activity;
 		$activity->activity_name = Input::get("activityname");
 		$activity->description = Input::get("activitydetail");
@@ -23,9 +40,13 @@ class ManageActivityController extends BaseController {
 		$activity->location = Input::get("location");
 		$activity->image = Input::get("file");
 		$activity->student = json_encode(Input::get("years"));
-		$reuslt = $activity->save();
-		return ($reuslt) ? 'true' : 'false';
-		// return json_encode(Input::get("years"));
+		try {
+			$reuslt = $activity->save();
+		}
+		catch ( \Exception $e ) {
+			return Redirect::to('manage/activity/add')->with('error', $e->getMessage());
+		}
+		return Redirect::to('manage/activity/summary/useradd')->with('message','บันทึกสำเร็จ');
 	}
 
 

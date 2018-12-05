@@ -5,6 +5,7 @@ test
 @section('content')
 <div class="container">
    <div class="page-header" style="margin-top:40px">
+   @include('error')
       <h2 class="mb-4 mr-sm-4 mb-sm-0">ประวัติการสร้างกิจกรรม
          <a href="{{url('/manage/activity/add')}}" class="aad btn btn-outline-success btn-secondary pull-right">เพิ่มกิจกรรม</a>
       </h2>

@@ -2,6 +2,11 @@
 @section('title')
 test
 @stop
+@section('cdn')
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+@stop
 @section('content')
 
 <style>
@@ -12,243 +17,191 @@ test
 
 <form class="form-horizontal" autocomplete="off" enctype="multipart/form-data" method="post">
    <div class="container">
-      <ul class="errorMessages"></ul>
-      <div class="row">
-         <div class="col-md-4" style="margin-top:50px">
-            <h2>สร้างข้อมูลกิจกรรม</h2>
-            <hr></div>
-         <div class="col-md-6"></div>
-      </div>
-      <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put name validation error messages here -->    
-               </span>
-            </div>
-         </div>
-      </div>
-      <div class="row" style="margin-top:20px">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">         
-            <label for="name">ชื่อกิจกรรม</label>           
-         </div>
-         <div class="col-md-6">
-             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-laptop"></i></span></div>
-               <input type="text" id="activityname" name="activityname" class="form-control" placeholder="ชื่อกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put name validation error messages here -->    
-               </span>
-            </div>
-         </div>
-      </div>
-     
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">     
-            <label for="name">รายละเอียด</label>                      
-         </div>
-         <div class="col-md-6">
+      <h2>สร้างข้อมูลกิจกรรม</h2>
+      <hr>
+      @include('error')
+      <div class="row justify-content-md-center">
+         <div class="col-sm-8">
             <div class="form-group">
-               <div class="input-group">
-                   <div class="input-group-prepend">
-                     <span class="input-group-text"><i class="fa fa-comment"></i></span>
-                  </div>
-                     <textarea   id="activitydetail" name="activitydetail"  class="form-control" aria-label="With textarea" placeholder="รายละเอียด" required=""></textarea>
-               </div>
+               <label for="name">ชื่อกิจกรรม</label>
+               <input type="text" class="form-control {{$errors->has('activityname') ? 'is-invalid' : ''}} " id="activityname" name="activityname" value="{{Input::old('activityname')}}" placeholder ="ชื่อกิจกรรม" >
+               <small id="emailHelp" class="form-text text-danger">{{$errors->first('activityname')}}</small>
             </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put name validation error messages here -->    
-               </span>
+            <div class="form-group">
+               <label for="exampleFormControlTextarea1">รายละเอียดเพิ่มเติม</label>
+               <textarea type="email" class="form-control" placeholder ="รายละเอียดเพิ่มเติม" id="activitydetail" name="activitydetail"> </textarea>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive">   
-            <label for="password">วันที่เริ่มกิจกรรม</label>     
-         </div>
-         <div class="col-md-6">
-            <div class="form-inline">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="row">
+               <div class="col">
                   <div class="form-group">
-                  <label for="password"></label>             
-                     <input type="text" id="daystart" name="daystart" class="form-control" placeholder="วัน เดือน ปี" required="">
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label for="password">วันที่สิ้นสุด</label>      
-                     &nbsp;&nbsp;         
-                     <input type="text" id="dayend" name="dayend" class="form-control" placeholder="วัน เดือน ปี" required=""> 
+                     <label for="name">วันที่เริ่มกิจกรรม</label>
+                     <input type="text" class="form-control {{$errors->has('daystart') ? 'is-invalid' : ''}}" id="daystart" name="daystart" value="{{Input::old('daystart')}}" data-toggle="datetimepicker" data-target="#daystart" placeholder ="00/00/0000">
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('daystart')}}</small>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-group">
+                     <label for="name">วันที่สิ้นสุดกิจกรรม</label>
+                     <input type="text" class="form-control {{$errors->has('dayend') ? 'is-invalid' : ''}}" id="dayend" name="dayend"  value="{{Input::old('dayend')}}" data-toggle="datetimepicker" data-target="#dayend" placeholder ="00/00/0000">
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('dayend')}}</small>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
-            <label for="password">เวลาเริ่มกิจกรรม</label>     
-         </div>
-         <div class="col-md-6">
-            <div class="form-inline">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
+            <div class="row">
+               <div class="col">
                   <div class="form-group">
-                  <label for="password"></label>             
-                     <input type="text" id="timestart" name="timestart" class="form-control" placeholder="00:00" required="">
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label for="password">เวลาสิ้นสุด</label>      
-                     &nbsp;&nbsp;         
-                     <input type="text" id="timeend" name="timeend" class="form-control" placeholder="00:00" required=""> 
+                     <label for="name">เวลาที่เริ่มกิจกรรม</label>
+                     <input type="text" class="form-control {{$errors->has('timestart') ? 'is-invalid' : ''}}" id="timestart" name="timestart" value="{{Input::old('timestart')}}" data-toggle="datetimepicker" data-target="#timestart" placeholder ="00:00">
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('timestart')}}</small>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-group">
+                     <label for="name">เวลาที่สิ้นสุดกิจกรรม</label>
+                     <input type="text" class="form-control {{$errors->has('timeend') ? 'is-invalid' : ''}}" id="timeend" name="timeend" value="{{Input::old('timeend')}}" data-toggle="datetimepicker" data-target="#timeend"  placeholder ="00:00">
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('timeend')}}</small>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
-            <label for="password">ภาคการศึกษา</label>     
-         </div>
-         <div class="col-md-6">
-            <div class="form-inline">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
+            <div class="row">
+               <div class="col">
                   <div class="form-group">
-                     <select id="term" name="term" class="form-control">
-                        <option value="1">ภาคการศึกษาที่ 1</option>
-                        <option value="2">ภาคการศึกษาที่ 2</option>
-                        <option value="3">ภาคการศึกษาที่ 3</option>
+                     <label for="term">ภาคการศึกษา</label>
+                     <select id="term" name="term"  placeholder ="ภาคการศึกษา" class="form-control {{$errors->has('term') ? 'is-invalid' : ''}}">
+                        <option value="">- เลือกภาคการศึกษา -</option>
+                        <option value="1" {{(Input::old('term')==1)?'selected':''}} >ภาคการศึกษาที่ 1</option>
+                        <option value="2" {{(Input::old('term')==2)?'selected':''}} >ภาคการศึกษาที่ 2</option>
+                        <option value="3" {{(Input::old('term')==3)?'selected':''}} >ภาคการศึกษาที่ 3</option>
                      </select>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <label for="password">ปีการศึกษา</label>      
-                     &nbsp;&nbsp;         
-                     <input type="text" id="sector" name="sector" class="form-control" placeholder="ปีการศึกษา" required=""> 
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('term')}}</small>
+                  </div>
+               </div>
+               <div class="col">
+                  <div class="form-group">
+                     <label for="name">ปีการศึกษา</label>
+                     <input type="text" class="form-control {{$errors->has('sector') ? 'is-invalid' : ''}}" id="sector" name="sector" value="{{Input::old('sector')}}"  placeholder ="ปีการศึกษา" >
+                     <small id="emailHelp" class="form-text text-danger">{{$errors->first('sector')}}</small>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-         <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:25px">   
-            <label for="password">อาจารย์ผู้รับผิดชอบ</label> 
-         </div>
-         <div class="col-md-6">
-            <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
-                  <div class="form-group ">  
-                     <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="1">      
-                     ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว        
-                     </label>       
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
-                     <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2"> 
-                     อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
-                     </label>    
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="3">  
-                     ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ                            
-                     </label>           
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
-                     <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="4">
-                     อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี                            
-                     </label>      
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="5">
-                     ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล                          
-                     </label>   
+
+            <label for="name">อาจารย์ที่รับผิดชอบ</label>
+            <div class="row">
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1" {{(!is_null(Input::old('teacher')) && in_array("1",Input::old('teacher')))?'checked':''}}>
+                     <label class="form-check-label" for="teacher1">                                                                            
+                        ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"   name="teacher[]" id="teacher2" value="2" {{(!is_null(Input::old('teacher')) && in_array("2",Input::old('teacher')))?'checked':''}}>
+                     <label class="form-check-label" for="teacher2">
+                        อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"   name="teacher[]" id="teacher3" value="3" {{(!is_null(Input::old('teacher')) && in_array("3",Input::old('teacher')))?'checked':''}}>
+                     <label class="form-check-label" for="teacher3">
+                        ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ 
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"   name="teacher[]" id="teacher4" value="4" {{(!is_null(Input::old('teacher')) && in_array("4",Input::old('teacher')))?'checked':''}}>
+                     <label class="form-check-label" for="teacher4">
+                        อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"   name="teacher[]" id="teacher5" value="5" {{(!is_null(Input::old('teacher')) && in_array("5",Input::old('teacher')))?'checked':''}}>
+                     <label class="form-check-label" for="teacher5">
+                        ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล 
+                     </label>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:3px">         
-            <label for="name">สถานที่จัดกิจกรรม</label>           
-         </div>
-         <div class="col-md-6">
-             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-home"></i></span></div>
-               <input type="text" id="location" name="location" class="form-control" placeholder="สถานที่จัดกิจกรรม" required="" autofocus="" aria-describedby="basic-addon1">
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put e-mail validation error messages here -->     
-               </span>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:10px">   
-            <label for="file">รูปกิจกรรม</label>   
-         </div>
-         <div class="col-md-6">
+            <small id="emailHelp" class="form-text text-danger">{{$errors->first('teacher')}}</small>
+
+            <br>
             <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend" >
-                <span class="input-group-text" id="basic-addon1"><i class="fa fa-image"></i></span></div>
-                  <input type="file" id="file" name="file" class="form-control" placeholder="file" accept="image/png, image/jpeg, image/gif">             
+               <label for="name">สถานที่จัดกิจกรรม</label>
+               <input type="text" class="form-control {{$errors->has('location') ? 'is-invalid' : ''}}" id="location" name="location" value="{{Input::old('location')}}" placeholder ="สถานที่จัดกิจกรรม" >
+               <small id="emailHelp" class="form-text text-danger">{{$errors->first('location')}}</small>
+            </div>
+            
+            <label for="name">นักศึกษาที่เข้าร่วม</label>
+            <div class="row">
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="years[]" id="year1" value="1"  {{(!is_null(Input::old('years')) && in_array("1",Input::old('years')))?'checked':''}}>
+                     <label class="form-check-label" for="year1">
+                        นักศึกษาปีการศึกษา 2558
+                     </label>
+                  </div>
                </div>
-            </div>
-         </div>
-         <div class="col-md-3">
-            <div class="form-control-feedback">
-               <span class="text-danger align-middle">
-                  <!-- Put e-mail validation error messages here -->        
-               </span>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="topping col-md-2 field-label-responsive" style="margin-top:20px">   
-            <label for="password">ปีการศึกษาที่เข้าร่วม</label> 
-         </div>
-         <div class="col-md-6">
-            <div class="year form-group">
-               <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
-                  <div class="form-group ">     
-                     <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="1">      
-                     นักศึกษาปีการศึกษา 2558        
-                     </label>       
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
-                     <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2"> 
-                     นักศึกษาปีการศึกษา 2559
-                     </label>    
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-                     <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="3">  
-                     นักศึกษาปีการศึกษา 2560                            
-                     </label>           
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-                     <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="4">
-                     นักศึกษาปีการศึกษา 2561                            
-                     </label>    
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="0">
-                     นักศึกษาปีการศึกษาอื่นๆ                           
-                     </label>   
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="years[]" id="year2" value="2" {{(!is_null(Input::old('years')) && in_array("2",Input::old('years')))?'checked':''}}>
+                     <label class="form-check-label" for="year2">
+                        นักศึกษาปีการศึกษา 2559
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="years[]" id="year3" value="3" {{(!is_null(Input::old('years')) && in_array("3",Input::old('years')))?'checked':''}}>
+                     <label class="form-check-label" for="year3">
+                        นักศึกษาปีการศึกษา 2560
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="years[]" id="year4" value="4" {{(!is_null(Input::old('years')) && in_array("4",Input::old('years')))?'checked':''}}>
+                     <label class="form-check-label" for="year4">
+                        นักศึกษาปีการศึกษา 2561
+                     </label>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox"  name="years[]" id="year5" value="5" {{(!is_null(Input::old('years')) && in_array("5",Input::old('years')))?'checked':''}}>
+                     <label class="form-check-label" for="year5">
+                        นักศึกษาปีการศึกษาปีอื่นๆ
+                     </label>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-md-2"></div>
-         <div class="col-md-6">             
-            <input type="submit" value="บันทึก" class="btn btn-success">       
+            <small id="emailHelp" class="form-text text-danger">{{$errors->first('years')}}</small>
+
+            <br>
+            <button type="submit" class="btn btn-success">บันทึก</button>
          </div>
       </div>
    </div>
 </form>
+<script type="text/javascript">
+   $(function () {
+         $('#timestart').datetimepicker({
+            format: 'LT'
+         });
+         $('#daystart').datetimepicker({
+            format: 'L'
+         });
+         $('#dayend').datetimepicker({
+            format: 'L'
+         });
+         $('#timeend').datetimepicker({
+            format: 'LT'
+         });
+   });
+</script>
 @stop
