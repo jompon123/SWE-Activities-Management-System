@@ -29,6 +29,7 @@ Route::get('/manage', function(){
 
 
 Route::get('/manage/activity/add', 'ManageActivityController@showActivityAdd');
+Route::post('/manage/activity/add', 'ManageActivityController@actionActivityAdd');
 
 Route::get('/manage/activity/summary', 'ManageActivityController@showActivitySummary');
 

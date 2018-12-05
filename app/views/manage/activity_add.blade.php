@@ -123,7 +123,7 @@ test
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <label for="password">ปีการศึกษา</label>      
                      &nbsp;&nbsp;         
-                     <input type="text" id="Yearstudy" name="Yearstudy" class="form-control" placeholder="ปีการศึกษา" required=""> 
+                     <input type="text" id="sector" name="sector" class="form-control" placeholder="ปีการศึกษา" required=""> 
                   </div>
                </div>
             </div>
@@ -136,30 +136,29 @@ test
          <div class="col-md-6">
             <div class="year form-group">
                <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
-                  <div class="form-group "> 
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                  <div class="form-group ">  
                      <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2558">      
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="1">      
                      ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว        
                      </label>       
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       
                      <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2559"> 
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2"> 
                      อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์ 
                      </label>    
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2560">  
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="3">  
                      ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ                            
                      </label>           
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="2561">
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="4">
                      อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี                            
                      </label>      
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="other">
+                     <input type="checkbox" class="form-check-input" name="teacher[]" id="optionsRadios1" value="5">
                      ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล                          
                      </label>   
                   </div>
@@ -216,27 +215,27 @@ test
                <div class="input-group mb-2 mr-sm-2 mb-sm-0" style="margin-top:20px">
                   <div class="form-group ">     
                      <label class="form-check-label required">   
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2558">      
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="1">      
                      นักศึกษาปีการศึกษา 2558        
                      </label>       
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                
                      <label class="form-check-label required">                              
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2559"> 
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2"> 
                      นักศึกษาปีการศึกษา 2559
                      </label>    
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
                      <label class="form-check-label required">                           
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2560">  
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="3">  
                      นักศึกษาปีการศึกษา 2560                            
                      </label>           
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="2561">
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="4">
                      นักศึกษาปีการศึกษา 2561                            
                      </label>    
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label class="form-check-label required">      
-                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="other">
+                     <input type="checkbox" class="form-check-input" name="years[]" id="optionsRadios1" value="0">
                      นักศึกษาปีการศึกษาอื่นๆ                           
                      </label>   
                   </div>
