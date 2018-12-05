@@ -11,7 +11,20 @@ USE `activity`;
 
 DROP TABLE IF EXISTS `activity`;
 CREATE TABLE `activity` (
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `activity_name` char(255) COLLATE utf8_unicode_ci NOT NULL,
+  `descripton` text COLLATE utf8_unicode_ci NOT NULL,
+  `teacher` text COLLATE utf8_unicode_ci NOT NULL,
+  `day_start` datetime NOT NULL,
+  `day_end` datetime NOT NULL,
+  `time_start` datetime NOT NULL,
+  `time_end` datetime NOT NULL,
+  `term_year` int(11) NOT NULL,
+  `sector` int(11) NOT NULL,
+  `location` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL,
+  `student` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
@@ -31,4 +44,4 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `created_by`, `
 (1,	'58145236',	'58145236',	'2018-11-21 21:14:09',	'sudarat',	'2018-11-21 21:14:09',	'sudarat'),
 (4,	'setset',	'set',	'2018-11-21 15:37:42',	'',	'2018-11-21 15:37:42',	NULL);
 
--- 2018-11-21 15:44:39
+-- 2018-12-05 09:00:46
