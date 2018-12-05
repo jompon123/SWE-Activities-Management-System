@@ -20,17 +20,19 @@ test
    </form>
    <table class="table table-striped" style="margin-top:20px">
       <thead>
-         <tr>
+         <tr class="table-success">
             <th class="text-center" style="padding-right:40px">ชื่อกิจกรรม</th>
-            <th class="text-center" style="padding-right:40px">ประเภทกิจกรรม</th>
-            <th class="text-center" style="padding-right:50px">อาจารย์ที่ปรึกษา</th>
-            <th class="text-center" style="padding-right:40px">ดำเนินการ</th>
+            <th class="text-center" style="padding-right:50px">วันที่จัดกิจกรรม</th>
+            <th class="text-center" style="padding-right:50px">วันที่สิ้นสุดกิจกรรม</th>
+            <th class="text-center" style="padding-right:40px">อาจารย์ที่ปรึกษา</th>
+            <th class="text-center" style="padding-right:40px">จัดการ</th>
          </tr>
       </thead>
       <tbody>
          <tr>
             <td class="text-left">ค่ายScrum</td>
-            <td class="text-left">กิจกรรมเสริมหลักสูตร</td>
+            <td class="text-left">22/12/2561</td>
+            <td class="text-left">25/12/2561</td>
             <td class="text-left">ผู้ช่วยศาสตราจารย์ ฐิมาพร เพชรแก้ว </td>
             <td class="text-left">  
                <a href="{{url('/manage/activity/add')}}" class="btn btn-info btn-sm">แก้ไข</a>  
@@ -40,7 +42,8 @@ test
          </tr>
          <tr>
             <td class="text-left">รับน้องทะเล</td>
-            <td class="text-left">กิจกรรมนักศึกษา</td>
+            <td class="text-left">25/12/2561</td>
+            <td class="text-left">28/12/2561</td>
             <td class="text-left">อาจารย์ ดร. พุทธิพร ธนธรรมเมธี </td>
             <td class="text-left">      
                <a href="{{url('/manage/activity/add')}}" class="btn btn-info btn-sm">แก้ไข</a> 
