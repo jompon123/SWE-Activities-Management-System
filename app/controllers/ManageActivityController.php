@@ -24,29 +24,30 @@ class ManageActivityController extends BaseController {
 		);
 		$validator = Validator::make(Input::all(),$rules);
 
-		if($validator->fails()){
-			return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
-		}
-		$activity = new Activity;
-		$activity->activity_name = Input::get("activityname");
-		$activity->description = Input::get("activitydetail");
-		$activity->teacher = json_encode(Input::get("teacher"));
-		$activity->day_start = Input::get("daystart");
-		$activity->day_end = Input::get("dayend");
-		$activity->time_start = Input::get("timestart");
-		$activity->time_end = Input::get("timeend");
-		$activity->term_year = Input::get("term");
-		$activity->sector = Input::get("sector");
-		$activity->location = Input::get("location");
-		$activity->image = Input::get("file");
-		$activity->student = json_encode(Input::get("years"));
-		try {
-			$reuslt = $activity->save();
-		}
-		catch ( \Exception $e ) {
-			return Redirect::to('manage/activity/add')->with('error', $e->getMessage());
-		}
-		return Redirect::to('manage/activity/summary/useradd')->with('message','บันทึกสำเร็จ');
+		// if($validator->fails()){
+		// 	return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
+		// }
+			$activity = new Activity;
+		// 	$activity->activity_name = Input::get("activityname");
+		// 	$activity->description = Input::get("activitydetail");
+		// 	$activity->teacher = json_encode(Input::get("teacher"));
+		// 	$activity->day_start = Input::get("daystart");
+		// 	$activity->day_end = Input::get("dayend");
+		// 	$activity->time_start = Input::get("timestart");
+		// 	$activity->time_end = Input::get("timeend");
+		// 	$activity->term_year = Input::get("term");
+		// 	$activity->sector = Input::get("sector");
+		// 	$activity->location = Input::get("location");
+		// 	$activity->image = Input::get("file");
+		// 	$activity->student = json_encode(Input::get("years"));
+		// try {
+		// 	$reuslt = $activity->save();
+		// }
+		// catch ( \Exception $e ) {
+		// 	return Redirect::to('manage/activity/add')->with('error', $e->getMessage());
+		// }
+		// return Redirect::to('manage/activity/summary/useradd')->with('message','บันทึกสำเร็จ');
+		return $activity->coverTime("Y-m-d",Input::get('daystart'));
 	}
 
 
