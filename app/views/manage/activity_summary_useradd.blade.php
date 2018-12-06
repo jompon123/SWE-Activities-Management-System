@@ -22,37 +22,27 @@ test
    <table class="table table-striped" style="margin-top:20px">
       <thead>
          <tr class="table-success">
-            <th class="text-center" style="padding-right:40px">ชื่อกิจกรรม</th>
-            <th class="text-center" style="padding-right:50px">วันที่จัดกิจกรรม</th>
-            <th class="text-center" style="padding-right:50px">วันที่สิ้นสุดกิจกรรม</th>
-            <th class="text-center" style="padding-right:40px">อาจารย์ที่ปรึกษา</th>
-            <th class="text-center" style="padding-right:40px">จัดการ</th>
+            <th class="text-center" >ชื่อกิจกรรม</th>
+            <th class="text-center" >วันที่จัดกิจกรรม</th>
+            <th class="text-center" >วันที่สิ้นสุดกิจกรรม</th>
+            <th class="text-center" >อาจารย์ที่ปรึกษา</th>
+            <th class="text-center" >จัดการ</th>
          </tr>
       </thead>
       <tbody>
-         <tr>
-            <td class="text-left">ค่ายScrum</td>
-            <td class="text-left">22/12/2561</td>
-            <td class="text-left">25/12/2561</td>
-            <td class="text-left">ผู้ช่วยศาสตราจารย์ ฐิมาพร เพชรแก้ว </td>
-            <td class="text-left">  
-               <a href="{{url('/manage/activity/add')}}" class="btn btn-info btn-sm">แก้ไข</a>  
-               <a href="{{url('/manage/activity/add')}}" class="btn btn-danger btn-sm">ลบ</a>
-               <a href="{{url('/manage/activity/check/status')}}" class="btn btn-warning btn-sm">เช็คสถานะ</a>   
-            </td>
-         </tr>
-         <tr>
-            <td class="text-left">รับน้องทะเล</td>
-            <td class="text-left">25/12/2561</td>
-            <td class="text-left">28/12/2561</td>
-            <td class="text-left">อาจารย์ ดร. พุทธิพร ธนธรรมเมธี </td>
-            <td class="text-left">      
-               <a href="{{url('/manage/activity/add')}}" class="btn btn-info btn-sm">แก้ไข</a> 
-               <a href="{{url('/manage/activity/add')}}" class="btn btn-danger btn-sm">ลบ</a> 
-               <a href="{{url('/manage/activity/check/status')}}" class="btn btn-warning btn-sm">เช็คสถานะ</a>   
-            </td>
-         </tr>
-         <tr>     
+         @foreach ($activities as $activity)
+            <tr>
+               <td class="text-center">{{ $activity->activity_name }}</td>
+               <td class="text-center">{{ $activity->day_start }}</td>
+               <td class="text-center">{{ $activity->day_end }}</td>
+               <td class="text-center">{{ $activity->getTeacherName() }}</td>
+               <td class="text-center">  
+                  <a href="{{url('/manage/activity/edit/'.$activity->id)}}" class="btn btn-info btn-sm">แก้ไข</a>  
+                  <a href="{{url('/manage/activity/delete/'.$activity->id)}}" class="btn btn-danger btn-sm">ลบ</a>
+                  <a href="{{url('/manage/activity/check/status')}}" class="btn btn-warning btn-sm">เช็คสถานะ</a>   
+               </td>
+            </tr>
+         @endforeach
       </tbody>
    </table>
 </div>
