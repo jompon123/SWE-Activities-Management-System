@@ -2,8 +2,27 @@
 class Activity extends Eloquent {
 	protected $table = 'activity';
 
-	public function coverTime($pattern, $date)
+	public function coverTime($date)
 	{
-		return date($pattern,strtotime($date)));
+		return date("Y-m-d",strtotime($date));
+	}
+	public function getTeacherName()
+	{
+		$teacher_name = "";
+		foreach (json_decode($this->teacher) as $t) {
+			if($t == 1){
+				$teacher_name .= "ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว";
+			}else if($t == 2){
+				$teacher_name .= " อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์";
+			}else if($t == 3){
+				$teacher_name .= "ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ";
+			}else if($t == 4){
+				$teacher_name .= "อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี";
+			}else if($t == 5){
+				$teacher_name .= "ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล";
+			}
+			$teacher_name .= "<br>";
+		}
+		return $teacher_name;
 	}
 }
