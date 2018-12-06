@@ -14,7 +14,7 @@
 }
 </style>
 
-<form action="{{url('manage/user/add')}}" method="post" class="form-horizontal" autocomplete="off">
+<form method="post" class="form-horizontal" autocomplete="off">
     <div class="container">
         <ul class="errorMessages"></ul>
         <div class="row">

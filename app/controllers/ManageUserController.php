@@ -22,7 +22,7 @@ class ManageUserController extends BaseController {
 	{
 		$user = new User;
 		$user->username = Input::get("student_id");
-		$user->password = Input::get("password");
+		$user->password = Hash::make(Input::get("password"));
 		$reuslt = $user->save();
 		return ($reuslt) ? 'true' : 'false';
 	}

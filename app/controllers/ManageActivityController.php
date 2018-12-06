@@ -39,7 +39,12 @@ class ManageActivityController extends BaseController {
 				return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
 			}
 		}
-			$activity = new Activity;
+			if(isset($id)){
+				$activity = Activity::find($id);
+			}else{
+				$activity = new Activity;
+			}
+			
 			$activity->activity_name = Input::get("activityname");
 			$activity->description = Input::get("activitydetail");
 			$activity->teacher = json_encode(Input::get("teacher"));

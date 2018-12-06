@@ -25,4 +25,27 @@ class Activity extends Eloquent {
 		}
 		return $teacher_name;
 	}
+	public function teacherJson()
+	{
+		if($this->teacher)
+			return json_decode($this->teacher);
+		else
+			return null;
+	}
+	public function studentJson()
+	{
+		if($this->student)
+			return json_decode($this->student);
+		else
+			return null;
+	}
+	public function day_startNomalFormat()
+	{
+		return date('d/m/Y',strtotime($this->day_start));
+	}
+	public function day_endNomalFormat()
+	{
+		return date('d/m/Y',strtotime($this->day_end));
+	}
+	
 }
