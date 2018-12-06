@@ -16,28 +16,21 @@ body{
 <div class="container">
 <div class="login-form">
 <div class="main-div">
-    <div class="panel">
+<div class="panel">
    <h3>Login</h3>
-   <p>Please enter your username and password</p>
+   @include('error')
    </div>
-    <!-- <form id="Login"> -->
-    <form action="{{url('/manage/activity/add')}}" method="get">
-
+    <form method="post">
         <div class="form-group">
-
-
-            <input type="email" class="form-control" id="inputUsername" placeholder="Username">
-
+            <input type="text" class="form-control" name="username" id="inputUsername" placeholder="Username">
         </div>
-
         <div class="form-group">
-
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
         </div>
         <div class="forgot">
-        <a href="reset.html">Forgot password?</a>
-</div>
+            <a href="reset.html">Forgot password?</a>
+        </div>
+
         <button type="submit" class="btn btn-primary">Login</button>
 
     </form>

@@ -19,14 +19,16 @@ Route::get('/', function()
 //Front-end
 
 //Manage
-Route::get('/login', function(){
-	return View::make('login');
-});
+// Route::get('/login', function(){
+// 	return View::make('login');
+// });
 
 Route::get('/manage', function(){
 	return View::make('manage.index');
 });
 
+Route::get('/login', 'AuthController@showLogin');
+Route::post('/login', 'AuthController@actionLogin');
 
 Route::get('/manage/activity/add', 'ManageActivityController@showActivityAdd');
 Route::post('/manage/activity/add', 'ManageActivityController@actionActivityAdd');
