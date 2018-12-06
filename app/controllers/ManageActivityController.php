@@ -7,15 +7,23 @@ class ManageActivityController extends BaseController {
 	{
 		return View::make('manage.activity_add');
 	}
-
-	public function actionActivityAdd()
+	public function showActivityEdit($id)
+	{
+		
+		$activity = Activity::find($id);
+		if(is_null($activity)){
+			return Redirect::to('manage/activity/summary/useradd')->with('error', 'ไม่พบกิจรรม');
+		}
+		return View::make('manage.activity_add',['activity'=>$activity]);
+	}
+	public function actionActivityAdd($id = null)
 	{
 		$rules = array(
 			'activityname' => 'required',
-			'daystart' => 'required',
-			'dayend' => 'required',
-			'timestart' => 'required',
-			'timeend' => 'required',
+			'daystart' => 'required|date_format:d/m/Y',
+			'dayend' => 'required|date_format:d/m/Y',
+			'timestart' => 'required|date_format:H:m',
+			'timeend' => 'required|date_format:H:m',
 			'sector' => 'required',
 			'location' => 'required',
 			'term' => 'required',
@@ -24,30 +32,44 @@ class ManageActivityController extends BaseController {
 		);
 		$validator = Validator::make(Input::all(),$rules);
 
-		// if($validator->fails()){
-		// 	return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
-		// }
+		if($validator->fails()){
+			if(isset($id)){
+				return Redirect::to('manage/activity/edit/'.$id)->withInput()->withErrors($validator);
+			}else{
+				return Redirect::to('manage/activity/add')->withInput()->withErrors($validator);
+			}
+		}
 			$activity = new Activity;
-		// 	$activity->activity_name = Input::get("activityname");
-		// 	$activity->description = Input::get("activitydetail");
-		// 	$activity->teacher = json_encode(Input::get("teacher"));
-		// 	$activity->day_start = Input::get("daystart");
-		// 	$activity->day_end = Input::get("dayend");
-		// 	$activity->time_start = Input::get("timestart");
-		// 	$activity->time_end = Input::get("timeend");
-		// 	$activity->term_year = Input::get("term");
-		// 	$activity->sector = Input::get("sector");
-		// 	$activity->location = Input::get("location");
-		// 	$activity->image = Input::get("file");
-		// 	$activity->student = json_encode(Input::get("years"));
-		// try {
-		// 	$reuslt = $activity->save();
-		// }
-		// catch ( \Exception $e ) {
-		// 	return Redirect::to('manage/activity/add')->with('error', $e->getMessage());
-		// }
-		// return Redirect::to('manage/activity/summary/useradd')->with('message','บันทึกสำเร็จ');
-		return $activity->coverTime("Y-m-d",Input::get('daystart'));
+			$activity->activity_name = Input::get("activityname");
+			$activity->description = Input::get("activitydetail");
+			$activity->teacher = json_encode(Input::get("teacher"));
+			$activity->day_start = $activity->coverTime(Input::get("daystart"));
+			$activity->day_end = $activity->coverTime(Input::get("dayend"));
+			$activity->time_start = Input::get("timestart");
+			$activity->time_end = Input::get("timeend");
+			$activity->term_year = Input::get("term");
+			$activity->sector = Input::get("sector");
+			$activity->location = Input::get("location");
+			$activity->image = Input::get("file");
+			$activity->student = json_encode(Input::get("years"));
+		try {
+			$reuslt = $activity->save();
+		}
+		catch ( \Exception $e ) {
+			if(isset($id)){
+				return Redirect::to('manage/activity/edit/'.$id)->withInput()->with('error', $e->getMessage());
+			}else{
+				return Redirect::to('manage/activity/add')->withInput()->with('error', $e->getMessage());
+			}
+
+		}
+		if(isset($id)){
+			return Redirect::to('manage/activity/edit/'.$id)->withInput()->with('message','แก้ไขสำเร็จ');
+		}else{
+			return Redirect::to('manage/activity/summary/useradd')->with('message','บันทึกสำเร็จ');
+		}
+		
+		// return $activity->coverTime(Input::get('daystart'));
 	}
 
 
@@ -58,7 +80,8 @@ class ManageActivityController extends BaseController {
 
 	public function showActivitySummaryUseradd()
 	{
-		return View::make('manage.activity_summary_useradd');
+		$activities = Activity::get();
+		return View::make('manage.activity_summary_useradd',['activities' => $activities]);
 	}
 
 	public function showActivityConclude()
