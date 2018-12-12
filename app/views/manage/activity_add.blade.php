@@ -14,32 +14,34 @@
 @section('content')
 
 <?php 
-   if(isset($activity))
-   {
-      $text_activityname = Input::old('activityname') ?? $activity->activity_name ?? '';
-      $text_activitydetail = Input::old('activitydetail') ?? $activity->description ?? '';
-      $text_daystart = Input::old('daystart') ?? $activity->day_startNomalFormat() ?? '';
-      $text_dayend = Input::old('dayend') ?? $activity->day_startNomalFormat() ?? '';
-      $text_timestart = Input::old('timestart') ?? $activity->time_start ?? '';
-      $text_timeend = Input::old('timeend') ?? $activity->time_end ?? '';
-      $checkbox_term = Input::old('term') ?? $activity->term_year ?? '';
-      $text_sector = Input::old('sector') ?? $activity->sector ?? '';
-      $check_teacher =  Input::old('teacher') ?? $activity->teacherJson() ?? array();
-      $text_location = Input::old('location') ?? $activity->location ?? '';
-      $check_years =  Input::old('years') ?? $activity->studentJson() ?? array();
-   }else{
-      $text_activityname = Input::old('activityname') ?? '';
-      $text_activitydetail = Input::old('activitydetail') ?? '';
-      $text_daystart = Input::old('daystart') ?? '';
-      $text_dayend = Input::old('dayend') ?? '';
-      $text_timestart = Input::old('timestart') ?? '';
-      $text_timeend = Input::old('timeend') ?? '';
-      $checkbox_term = Input::old('term') ?? '';
-      $text_sector = Input::old('sector') ?? '';
-      $check_teacher =  Input::old('teacher') ?? array();
-      $text_location = Input::old('location') ?? '';
-      $check_years =  Input::old('years') ?? array();
-   }
+
+
+   // if(isset($activity))
+   // {
+   //    $text_activityname = Input::old('activityname') ?? $activity->activity_name ?? '';
+   //    $text_activitydetail = Input::old('activitydetail') ?? $activity->description ?? '';
+   //    $text_daystart = Input::old('daystart') ?? $activity->day_startNomalFormat() ?? '';
+   //    $text_dayend = Input::old('dayend') ?? $activity->day_startNomalFormat() ?? '';
+   //    $text_timestart = Input::old('timestart') ?? $activity->time_start ?? '';
+   //    $text_timeend = Input::old('timeend') ?? $activity->time_end ?? '';
+   //    $checkbox_term = Input::old('term') ?? $activity->term_year ?? '';
+   //    $text_sector = Input::old('sector') ?? $activity->sector ?? '';
+   //    $check_teacher =  Input::old('teacher') ?? $activity->teacherJson() ?? array();
+   //    $text_location = Input::old('location') ?? $activity->location ?? '';
+   //    $check_years =  Input::old('years') ?? $activity->studentJson() ?? array();
+   // }else{
+   //    $text_activityname = Input::old('activityname') ?? '';
+   //    $text_activitydetail = Input::old('activitydetail') ?? '';
+   //    $text_daystart = Input::old('daystart') ?? '';
+   //    $text_dayend = Input::old('dayend') ?? '';
+   //    $text_timestart = Input::old('timestart') ?? '';
+   //    $text_timeend = Input::old('timeend') ?? '';
+   //    $checkbox_term = Input::old('term') ?? '';
+   //    $text_sector = Input::old('sector') ?? '';
+   //    $check_teacher =  Input::old('teacher') ?? array();
+   //    $text_location = Input::old('location') ?? '';
+   //    $check_years =  Input::old('years') ?? array();
+   // }
    
 
 ?>
