@@ -6,9 +6,7 @@ test
 <div class="container">
    <div class="page-header" style="margin-top:40px">
    @include('error')
-      <h2 class="mb-4 mr-sm-4 mb-sm-0">ประวัติการสร้างกิจกรรม
-         <a href="{{url('/manage/activity/add')}}" class="aad btn btn-outline-success btn-secondary pull-right">เพิ่มกิจกรรม</a>
-      </h2>
+      <h2 class="mb-4 mr-sm-4 mb-sm-0">กิจกรรมที่รับผิดชอบ</h2>
    </div>
    <br>
    <form>
@@ -39,7 +37,7 @@ test
                <td class="text-center">  
                   <a href="{{url('/manage/activity/edit/'.$activity->id)}}" class="btn btn-info btn-sm">แก้ไข</a>  
                   <a href="{{url('/manage/activity/delete/'.$activity->id)}}" class="btn btn-danger btn-sm">ลบ</a>
-                  <a href="{{url('/manage/activity/check/status')}}" class="btn btn-warning btn-sm">เช็คสถานะ</a>   
+                  <a href="{{url('/manage/activity/check/status')}}" class="btn btn-warning btn-sm">เช็คการเข้าร่วมกิจกรรม</a>   
                </td>
             </tr>
          @endforeach
