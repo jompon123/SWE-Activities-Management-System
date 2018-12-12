@@ -121,7 +121,51 @@
                </div>
             </div>
 
-            <label for="name">อาจารย์ที่รับผิดชอบ</label>
+
+         <table class="table-Default">
+            <thead>
+               <tr>
+                  <th class="text-center" style="padding-right:40px">ชื่อ</th>
+                  <th class="text-center" style="padding-right:40px">หัวหน้าโครงการ</th>
+                  <th class="text-center" style="padding-right:40px">ผู้ร่วมโครงการ</th>
+                  <th class="text-center" style="padding-right:40px">ผู้เข้าร่วม</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="text-left">ผู้ช่วยศาสตราจารย์ ฐิมาพร  เพชรแก้ว</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+               </tr>
+               <tr>
+                  <td class="text-left">อาจารย์ ดร. กรัณรัตน์   ธรรมรักษ์</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+               </tr>
+               <tr>
+                  <td class="text-left">ผู้ช่วยศาสตราจารย์ อุหมาด  หมัดอาด้ำ</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+               </tr>
+               <tr>
+                  <td class="text-left">อาจารย์ ดร. พุทธิพร  ธนธรรมเมธี</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+               </tr>
+               <tr>
+                  <td class="text-left">ผู้ช่วยศาสตราจารย์ เยาวเรศ  ศิริสถิตย์กุล</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
+               </tr>
+            </tbody>
+         </table>
+
+            <!-- <label for="name">อาจารย์ที่รับผิดชอบ</label>
             <div class="row">
                <div class="col-6">
                   <div class="form-check">
@@ -163,7 +207,7 @@
                      </label>
                   </div>
                </div>
-            </div>
+            </div> -->
             <small id="emailHelp" class="form-text text-danger">{{$errors->first('teacher')}}</small>
 
             <br>
@@ -171,6 +215,12 @@
                <label for="name">สถานที่จัดกิจกรรม</label>
                <input type="text" class="form-control {{$errors->has('location') ? 'is-invalid' : ''}}" id="location" name="location" value="{{$text_location}}" placeholder ="สถานที่จัดกิจกรรม" >
                <small id="emailHelp" class="form-text text-danger">{{$errors->first('location')}}</small>
+               <!-- <select id="location_id" name="location_id" class="form-control">
+                  <option value="2">อาคารเรียนรวม7  ( บริเวณด้านหลังอาคารเรียนรวม7 )</option>
+                  <option value="3">โรงอาหาร4  ( บริเวณด้านในโรงอาหาร4 )</option>
+                  <option value="4">มหาวิทยาลัยสงขลานครินทร์  ( 15 ถนน กาญจนวนิช ซอย 7 ตำบล คอหงส์ อำเภอ หาดใหญ่ สงขลา 90110 )</option>
+                  <option value="5">อาคารเครื่องมือวิทยาศาสตร์  ( ห้องปฏิบัติการคอมพิวเตอร์2  )</option>
+               </select> -->
             </div>
             
             <label for="name">นักศึกษาที่เข้าร่วม</label>
@@ -179,7 +229,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year1" value="1"  {{(in_array("1",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year1">
-                        นักศึกษาปีการศึกษา 2558
+                        นักศึกษาชั้นปีที่ 1
                      </label>
                   </div>
                </div>
@@ -187,7 +237,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year2" value="2" {{(in_array("2",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year2">
-                        นักศึกษาปีการศึกษา 2559
+                        นักศึกษาชั้นปีที่ 2
                      </label>
                   </div>
                </div>
@@ -195,7 +245,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year3" value="3" {{(in_array("3",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year3">
-                        นักศึกษาปีการศึกษา 2560
+                        นักศึกษาชั้นปีที่ 3
                      </label>
                   </div>
                </div>
@@ -203,7 +253,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year4" value="4" {{(in_array("4",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year4">
-                        นักศึกษาปีการศึกษา 2561
+                        นักศึกษาชั้นปีที่ 4
                      </label>
                   </div>
                </div>
@@ -211,7 +261,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year5" value="5" {{(in_array("5",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year5">
-                        นักศึกษาปีการศึกษาปีอื่นๆ
+                        นักศึกษาชั้นปีอื่นๆ
                      </label>
                   </div>
                </div>
@@ -241,3 +291,4 @@
    });
 </script>
 @stop
+
