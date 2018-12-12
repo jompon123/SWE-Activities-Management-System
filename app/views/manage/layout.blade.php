@@ -31,7 +31,8 @@
                    จัดการกิจกรรม
                   </a>
                 <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{url('/manage/activity/summary/useradd')}}">สร้างกิจกรรม</a>
+                  <a class="dropdown-item" href="{{url('/manage/activity/add')}}">สร้างกิจกรรม</a>
+                  <a class="dropdown-item" href="{{url('/manage/activity/summary/useradd')}}">กิจกรรมที่รับผิดชอบ</a>
                   <a class="dropdown-item" href="{{url('/manage/activity/summary')}}">กิจกรรมทั้งหมด</a>
                   <a class="dropdown-item" href="{{url('/manage/activity/conclude')}}">สรุปการเข้าร่วมกิจกรรม</a>
                 </div>
