@@ -64,7 +64,7 @@
                <small id="emailHelp" class="form-text text-danger">{{$errors->first('activityname')}}</small>
             </div>
             <div class="form-group">
-               <label for="exampleFormControlTextarea1">รายละเอียดเพิ่มเติม</label>
+               <label for="exampleFormControlTextarea1">รายละเอียดเพิ่มเติม (ระบุหรือไม่ระบุก็ได้)</label>
                <textarea type="email" class="form-control" placeholder ="รายละเอียดเพิ่มเติม" id="activitydetail" name="activitydetail">{{$text_activitydetail}}</textarea>
             </div>
             <div class="row">
@@ -125,10 +125,10 @@
          <table class="table-Default">
             <thead>
                <tr>
-                  <th class="text-center" style="padding-right:40px">ชื่อ</th>
-                  <th class="text-center" style="padding-right:40px">หัวหน้าโครงการ</th>
-                  <th class="text-center" style="padding-right:40px">ผู้ร่วมโครงการ</th>
-                  <th class="text-center" style="padding-right:40px">ผู้เข้าร่วม</th>
+                  <td class="text-center" style="padding-right:40px">ชื่อ</td>
+                  <td class="text-center" style="padding-right:40px">หัวหน้าโครงการ</td>
+                  <td class="text-center" style="padding-right:40px">ผู้ร่วมโครงการ</td>
+                  <td class="text-center" style="padding-right:40px">ผู้เข้าร่วม</td>
                </tr>
             </thead>
             <tbody>
@@ -237,7 +237,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year2" value="2" {{(in_array("2",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year2">
-                        นักศึกษาชั้นปีที่ 2
+                        นักศึกษาชั้นปีที่ 4
                      </label>
                   </div>
                </div>
@@ -245,7 +245,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year3" value="3" {{(in_array("3",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year3">
-                        นักศึกษาชั้นปีที่ 3
+                        นักศึกษาชั้นปีที่ 2
                      </label>
                   </div>
                </div>
@@ -253,7 +253,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year4" value="4" {{(in_array("4",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year4">
-                        นักศึกษาชั้นปีที่ 4
+                        นักศึกษาชั้นปีอื่นๆ 
                      </label>
                   </div>
                </div>
@@ -261,7 +261,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year5" value="5" {{(in_array("5",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year5">
-                        นักศึกษาชั้นปีอื่นๆ
+                        นักศึกษาชั้นปีที่ 3
                      </label>
                   </div>
                </div>
