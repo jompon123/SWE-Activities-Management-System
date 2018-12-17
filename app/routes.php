@@ -54,3 +54,13 @@ Route::get('/manage/user/student/add', 'ManageUserController@showUserStudentAdd'
 Route::post('/manage/user/student/add', 'ManageUserController@actionUserStudentAdd');
 
 Route::get('/manage/user/teacher/add', 'ManageUserController@showUserTeacherAdd');
+ 
+Route::get('/student_profile', 'StudentProfileController@studentProfile');
+Route::post('/student_profile','StudentProfileController@actionStudent');
+
+Route::get('/student_form', 'StudentFormController@studentForm');
+Route::post('/student_form','StudentFormController@actionStudentForm');
+
+Route::get('/student_upload', 'StudentUploadController@studentUpload');
+Route::post('/student_upload','StudentUploadController@actionStudentUpload');
+
