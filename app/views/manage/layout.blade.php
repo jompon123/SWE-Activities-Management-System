@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-top:30px">
               <ul class="navbar-nav my-lg-0">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">หน้าหลัก <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{url('/home')}}">หน้าหลัก <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul class="navbar-nav my-lg-0">
@@ -53,7 +53,7 @@
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="#">แก้ไขโปรไฟล์</a>
                       <a class="dropdown-item" href="#">แก้ไขรหัสผ่าน</a>
-                      <a class="dropdown-item" href="#">ออกจากระบบ</a>
+                      <a class="dropdown-item" href="{{url('/home')}}">ออกจากระบบ</a>
                   <div>
                 </li>
               </ul>
