@@ -49,9 +49,9 @@
 <form class="form-horizontal" autocomplete="off" enctype="multipart/form-data" method="post">
    <div class="container">
       @if(isset($activity))
-         <h2>แก้ไขข้อมูลกิจกรรม</h2>
+         <h2 style="margin-top:30px">แก้ไขข้อมูลกิจกรรม</h2>
       @else
-         <h2>สร้างข้อมูลกิจกรรม</h2>
+         <h2 style="margin-top:30px">สร้างข้อมูลกิจกรรม</h2>
       @endif
       
       <hr>
@@ -121,8 +121,7 @@
                </div>
             </div>
 
-
-         <table class="table-Default">
+         <!-- <table class="table-Default">
             <thead>
                <tr>
                   <td class="text-center" style="padding-right:40px">ชื่อ</td>
@@ -163,9 +162,9 @@
                   <td class="text-center"><input class="form-check-input" type="checkbox"  name="teacher[]" id="teacher1" value="1"></td>
                </tr>
             </tbody>
-         </table>
+         </table> -->
 
-            <!-- <label for="name">อาจารย์ที่รับผิดชอบ</label>
+            <label for="name">อาจารย์ที่รับผิดชอบ</label>
             <div class="row">
                <div class="col-6">
                   <div class="form-check">
@@ -207,7 +206,7 @@
                      </label>
                   </div>
                </div>
-            </div> -->
+            </div>
             <small id="emailHelp" class="form-text text-danger">{{$errors->first('teacher')}}</small>
 
             <br>
