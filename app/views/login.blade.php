@@ -1,3 +1,6 @@
+@section('title')
+    login
+@stop
 <html>
   <head>
     <link rel="stylesheet" href="{{asset('assets/css/login/login.css')}}">
