@@ -1,15 +1,28 @@
 @extends('manage.layout')
 @section('title')
-@if(isset($activity))
+@if(isset($student))
    โปรไฟล์นักศึกษา
 @else
-   x
+    x
 @endif
 @stop
 @section('cdn')
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+
+  
+   
+    
+    
+
 @stop
 @section('content')
 
@@ -23,101 +36,70 @@
             <!-- /.row -->
             <div class="col-sm-12">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+              
+                <div class="col-lg-6 col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                              
-                                <div class="col-xs-9 text-left">
-                              
-                                <div>Profile Student</div>
-                                <div>Name   :</div>
-                                <div>ID     :</div>
-                                <div>Tel    :</div>
-                                <div>E-mail :</div>
+                        <p>                                
+                            <a href="{{url('/student_upload')}}">   
+                                <input type="image" src="/SWE-Activities-Management-System/app/views/x3.jpg" alt="x3" width="130" height="130" >
+                            </a>
+                        </p>
                             
+                                <div class="col-xs-9 text-left"> 
+                                     
+                                <div><h2>ข้อมูลนักศึกษา</h2></div>
+                                <div>ชื่อ-นามสกุล :</div>
+                                <div>รหัสนักศึกษา :</div>
+                                <div>เบอร์โทร    :</div>
+                                <div>อีเมล       :</div>
+                                
+                                
                                 <div class="col-xs-3">
-                                    <i class="fa fa-comments fa-5x"></i>
+                                  
                                 </div>
                                 </div>
                                 
                             </div>
                         </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details Update</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+                     
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                <div class="col-lg-6 col-md-12 text-right">
+                        <div class="wrap">
+                                <div class="search">
+                                   <input type="text" class="searchTerm" placeholder="Search">
+                                   <button type="submit" class="searchButton">
+                                     <i class="fa fa-search"></i>
+                                  </button>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>New Tasks!</div>
+                             </div>
+                    <div class="panel panel-primary">
+                            
+                        <div class="panel-heading">
+                                
+                            <div class="row">
+                                    
+                                
+                                <div class="col-xs-18 text-right">
+                                    
+                                    <div>กิจกรรมที่ต้องเข้าร่วม</div>
                                 </div>
                             </div>
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
+                                    
+                                <span class="pull-right">กิจกรรมที่ต้องเข้าร่วมทั้งหมด</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>New Orders!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Support Tickets!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+               
+                
             </div>
             <!-- /.row -->
             <div class="row">
@@ -129,19 +111,15 @@
                        array("label"=> "2010", "y"=> 3),
                        array("label"=> "2011", "y"=> 3),
                        array("label"=> "2012", "y"=> 4),
-                       array("label"=> "2013", "y"=> 3),
-                       array("label"=> "2014", "y"=> 3),
-                       array("label"=> "2015", "y"=> 5),
-                       array("label"=> "2016", "y"=> 7)
+                       array("label"=> "2013", "y"=> 3)
+                    
                    );
                    $dataPoints2 = array(
                        array("label"=> "2010", "y"=> 6),
                        array("label"=> "2011", "y"=> 7),
                        array("label"=> "2012", "y"=> 7),
-                       array("label"=> "2013", "y"=> 8),
-                       array("label"=> "2014", "y"=> 6),
-                       array("label"=> "2015", "y"=> 6),
-                       array("label"=> "2016", "y"=> 9)
+                       array("label"=> "2013", "y"=> 8)
+                      
                    );
                        
                    ?>
@@ -155,7 +133,7 @@
                        animationEnabled: true,
                        theme: "light2",
                        title:{
-                           text: "Activity History Graph"
+                           text: "กราฟการเข้าร่วมกิจกรรมของนักศึกษา"
                        },
                        legend:{
                            cursor: "pointer",
@@ -165,16 +143,16 @@
                        },
                        data: [{
                            type: "column",
-                           name: "Real Trees",
+                           name: "กิจกรรมที่เข้าร่วมแล้ว",
                            indexLabel: "{y}",
-                           yValueFormatString: "$#0.##",
+                           yValueFormatString: "#0.##กิจกรรม",
                            showInLegend: true,
                            dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
                        },{
                            type: "column",
-                           name: "Artificial Trees",
+                           name: "กิจกรรมที่ต้องเข้าร่วม",
                            indexLabel: "{y}",
-                           yValueFormatString: "$#0.##",
+                           yValueFormatString: "#0.##กิจกรรม",
                            showInLegend: true,
                            dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
                        }]
@@ -205,119 +183,69 @@
 
                 <div class="col-lg-8">
                     
-                    @section ('pane2_panel_title', 'Responsive Timeline')
+                    @section ('pane2_panel_title', 'ประวัติการเข้าร่วมกิจกรรม')
                     @section ('pane2_panel_body')
-                        
-                        <!-- /.panel -->
-                        
-                            
-                  
-                        <ul class="timeline">
-                            <li>
-                                <div class="timeline-badge"><i class="fa fa-check"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                        <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>
-                                        </p>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                                        <hr>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                <i class="fa fa-gear"></i>  <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Action</a>
-                                                </li>
-                                                <li><a href="#">Another action</a>
-                                                </li>
-                                                <li><a href="#">Something else here</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                            
-                            <!-- /.panel-body -->
-                       
-                        <!-- /.panel -->
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>ชื่อกิจกรรม</th>
+                            <th>วันที่</th>
+                            <th>รายละเอียด</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Default</td>
+                            <td>1/3/2561</td>
+                            <td>def@somemail.com</td>
+                          </tr>      
+                          <tr class="table-primary">
+                            <td>Primary</td>
+                            <td>1/4/2561</td>
+                            <td>joe@example.com</td>
+                          </tr>
+                          <tr class="table-success">
+                            <td>Success</td>
+                            <td>1/5/2561</td>
+                            <td>john@example.com</td>
+                          </tr>
+                          <tr class="table-danger">
+                            <td>Danger</td>
+                            <td>1/6/2561</td>
+                            <td>mary@example.com</td>
+                          </tr>
+                          <tr class="table-info">
+                            <td>Info</td>
+                            <td>1/7/2561</td>
+                            <td>july@example.com</td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Warning</td>
+                            <td>1/8/2561</td>
+                            <td>bo@example.com</td>
+                          </tr>
+                          <tr class="table-active">
+                            <td>Active</td>
+                            <td>1/9/2561</td>
+                            <td>act@example.com</td>
+                          </tr>
+                          <tr class="table-secondary">
+                            <td>Secondary</td>
+                            <td>1/12/2561</td>
+                            <td>sec@example.com</td>
+                          </tr>
+                          <tr class="table-light">
+                            <td>Light</td>
+                            <td>1/11/2561</td>
+                            <td>angie@example.com</td>
+                          </tr>
+                          <tr class="table-dark text-dark">
+                            <td>Dark</td>
+                            <td>1/10/2561</td>
+                            <td>bo@example.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     @endsection
                     @include('widgets.panel', array('header'=>true, 'as'=>'pane2'))
                     </div>

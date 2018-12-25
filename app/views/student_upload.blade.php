@@ -1,9 +1,9 @@
 @extends('manage.layout')
 @section('title')
 @if(isset($activity))
-   แก้ไขข้อมูลนักศึกษา
+   รูปนักศึกษา
 @else
-   แก้ไขข้อมูลนักศึกษา
+   y
 @endif
 @stop
 @section('cdn')
@@ -14,7 +14,7 @@
 @section('content')
 
 <div class="container">
-  <h1>Laravel - Student Image Uploading Tutorial</h1>
+  <h2>เปลี่ยนรูปโปรไฟล์นักศึกษา</h2>
 
 
   <form action="" enctype="multipart/form-data" method="POST">
@@ -29,19 +29,18 @@
 
 
     <div class="form-group">
-      <label>Alt Title:</label>
-      <input type="text" name="title" class="form-control" placeholder="Add Title">
+     
     </div>
 
 
 	<div class="form-group">
-      <label>Image:</label>
+      <label>รูปภาพ:</label>
       <input type="file" name="image" class="form-control">
     </div>
 
 
     <div class="form-group">
-      <button class="btn btn-success upload-image" type="submit">Upload Image</button>
+      <button class="btn btn-success upload-image" type="submit">อัพโหลด</button>
     </div>
 
 
@@ -55,8 +54,6 @@
   $("body").on("click",".upload-image",function(e){
     $(this).parents("form").ajaxForm(options);
   });
-
-
   var options = { 
     complete: function(response) 
     {
@@ -68,8 +65,6 @@
     	}
     }
   };
-
-
   function printErrorMsg (msg) {
 	$(".print-error-msg").find("ul").html('');
 	$(".print-error-msg").css('display','block');
@@ -78,6 +73,5 @@
 	});
   }
 </script>
-
-
+		
 @stop
