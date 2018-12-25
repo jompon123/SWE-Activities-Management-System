@@ -50,10 +50,9 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-(1,	'58145236',	'58145236',	'2018-11-21 21:14:09',	'sudarat',	'2018-11-21 21:14:09',	'sudarat'),
 (4,	'setset',	'set',	'2018-11-21 15:37:42',	'',	'2018-11-21 15:37:42',	NULL),
 (5,	'58122516',	'$2y$10$5LD.R8PHfpFJUlu/OgRwaeR6HaI78I77olAvdzoNRbHm4oo1Fhm.i',	'2018-12-25 17:06:35',	'',	'2018-12-06 23:22:57',	NULL),
-(8,	'58145236',	'58145236',	'0000-00-00 00:00:00',	'',	NULL,	NULL),
-(9,	'58112970',	'$2y$10$DfmoYdW8DxBRRc7yXO9sCeyeQ82s3aFXuH69RILVs4i3NkZAEr58a',	'2018-12-25 17:10:23',	'',	'2018-12-25 17:10:23',	NULL);
+(9,	'58112970',	'$2y$10$DfmoYdW8DxBRRc7yXO9sCeyeQ82s3aFXuH69RILVs4i3NkZAEr58a',	'2018-12-25 17:10:23',	'',	'2018-12-25 17:10:23',	NULL),
+(10,	'58145236',	'$2y$10$6GJ5eGP2ewvqQxhAK1NcVubr3L8A7WYEWqGvGqiIB26wVhKpFDzOS',	'2018-12-25 17:13:28',	'',	'2018-12-25 17:13:28',	NULL);
 
--- 2018-12-25 10:11:04
+-- 2018-12-25 10:14:21
