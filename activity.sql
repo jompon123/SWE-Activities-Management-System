@@ -52,6 +52,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
 (1,	'58145236',	'58145236',	'2018-11-21 21:14:09',	'sudarat',	'2018-11-21 21:14:09',	'sudarat'),
 (4,	'setset',	'set',	'2018-11-21 15:37:42',	'',	'2018-11-21 15:37:42',	NULL),
-(5,	'58122516',	'$2y$10$5LD.R8PHfpFJUlu/OgRwaeR6HaI78I77olAvdzoNRbHm4oo1Fhm.i',	'2018-12-25 17:00:54',	'',	'2018-12-06 23:22:57',	NULL);
+(5,	'58145236',	'$2y$10$5LD.R8PHfpFJUlu/OgRwaeR6HaI78I77olAvdzoNRbHm4oo1Fhm.i',	'2018-12-25 17:03:18',	'',	'2018-12-06 23:22:57',	NULL);
 
--- 2018-12-25 10:01:08
+-- 2018-12-25 10:04:00
