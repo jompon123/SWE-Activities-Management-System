@@ -19,11 +19,11 @@
   </form>
   <table class="table table-striped" style="margin-top:20px">
       <thead>
-         <tr>
-            <th class="text-center" style="padding-right:40px">ชื่อกิจกรรม</th>
-            <th class="text-center" style="padding-right:40px">วันที่จัดกิจกรรม</th>
-            <th class="text-center" style="padding-right:50px">ผู้ร่วมโครงการ</th>
-            <th class="text-center" style="padding-right:40px">ปีการศึกษาที่เข้าร่วม</th>
+         <tr class="table-success">
+            <th class="text-center">ชื่อกิจกรรม</th>
+            <th class="text-center">วันที่จัดกิจกรรม</th>
+            <th class="text-center">ผู้ร่วมโครงการ</th>
+            <th class="text-center">นักศึกษาที่เข้าร่วม</th>
          </tr>
       </thead>
       <tbody>
