@@ -4,6 +4,7 @@ class Activity extends Eloquent {
 
 	public function coverTime($date)
 	{
+		$date = strtr($date, '/', '-');
 		return date("Y-m-d",strtotime($date));
 	}
 	public function getTeacherName()
