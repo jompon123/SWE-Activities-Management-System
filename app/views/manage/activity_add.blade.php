@@ -236,7 +236,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year2" value="2" {{(in_array("2",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year2">
-                        นักศึกษาชั้นปีที่ 4
+                        นักศึกษาชั้นปีที่ 2
                      </label>
                   </div>
                </div>
@@ -244,7 +244,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year3" value="3" {{(in_array("3",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year3">
-                        นักศึกษาชั้นปีที่ 2
+                        นักศึกษาชั้นปีที่ 3
                      </label>
                   </div>
                </div>
@@ -252,7 +252,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year4" value="4" {{(in_array("4",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year4">
-                        นักศึกษาชั้นปีอื่นๆ 
+                     นักศึกษาชั้นปีที่ 4
                      </label>
                   </div>
                </div>
@@ -260,7 +260,7 @@
                   <div class="form-check">
                      <input class="form-check-input" type="checkbox"  name="years[]" id="year5" value="5" {{(in_array("5",$check_years))?'checked':''}}>
                      <label class="form-check-label" for="year5">
-                        นักศึกษาชั้นปีที่ 3
+                        นักศึกษาชั้นปีอื่นๆ
                      </label>
                   </div>
                </div>
