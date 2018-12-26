@@ -86,7 +86,7 @@ class ManageActivityController extends BaseController {
 			'location' => 'required',
 			'term' => 'required',
 			'teacher' => 'required_without_all',
-			'years' => 'required_without_all|number'
+			'years' => 'required_without_all'
 		);
 		$validator = Validator::make(Input::all(),$rules);
 
